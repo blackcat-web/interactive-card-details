@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.left {
+    background-image: url('bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    flex: 1;
+    position: relative;
+
+}
+
+.card {
+    position: absolute;
+    width: 350px;
+    height: 230px;
+    border-radius: 10px;
+    right: -100px;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.front {
+    background-image: url('bg-card-front.png');
+    background-position: center;
+    background-size: cover;
+    top: 60px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    z-index: 1;
+
+}
+
+.back {
+    background-image: url('./bg-card-back.png');
+    background-position: center;
+    top: 300px;
+    right: -200px;
+}
+
+.cardDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+
+}
+
+.cardDetails p:nth-child(1) {
+    grid-column: span 2;
+    letter-spacing: .39rem;
+}
+
+.cardDetails p:nth-child(3) {
+    text-align: right;
+}
+
+
+#cvvNum {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    color: #fff;
+
+}
+
+#cvv {
+    float: right;
+    font-size: 17px;
+    font-weight: 700;
+    color: #d3cece;
+}
+
+.right {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inputForm {
+    padding: 10px;
+    width: 450px;
+}
+
+.inputForm p {
+    margin: 20px 0px;
+}
+
+.inputForm label,
+.inputForm p {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.inputForm input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #808080;
+    color: #0a0a2c !important;
+    font-weight: 600;
+
+
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.inputForm input::placeholder {
+    font-size: 17px;
+}
+
+#cname,
+#cnumber {
+    width: 100%;
+}
+
+#exday,
+#exmonth {
+    width: 40%;
+}
+
+.expire-cvv {
+    margin: 10px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.exDM {
+    flex: 1;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0a0a2c;
+    color: #fff;
+    font-size: 17px;
+}
+
+.complete-message {
+    padding: 0px 20px;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+}
+
+.complete-message h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.complete-message p {
+    color: #808080;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.none {
+    display: none;
+}
+
+.errorText {
+    font-size: 12px;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #bb0000;
+}
+
+@media screen and (max-width:550px) {
+    body{
+        height: 100vh;
+    }
+    .container {
+        flex-flow: row wrap;
+        height: 100vh;
+        justify-content: space-between;
+    }
+
+    .left {
+        background-image: url('./bg-main-mobile.png');
+        background-position: top;
+        background-size: cover;
+        width: 100%;
+        height: 30vh;
+        flex: none;
+    }
+
+    .right {
+        flex: none;
+        justify-content: flex-start;
+        height: 40vh;
+        
+        width: 100%;
+        padding: 10px;
+    }
+
+    .inputForm {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .inputForm label,
+    .inputForm p {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .exptext {
+        font-size: 14px !important;
+        letter-spacing: normal !important;
+    }
+
+    .card {
+        
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        right: 0;
+        font-size: 15px;
+        color: #fff;
+
+    }
+
+    .front {
+        top: 146px;
+        left: 10px;
+        z-index: 1;
+        padding: 15px;
+    }
+    #cardNum{
+        letter-spacing: 0.2rem;
+    }
+
+    .back {
+        top: 20px;
+        right: 10px;
+
+    }
+
+    .complete-message h2 {
+        font-size: 20px;
+    }
+
+    .complete-message p {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width:430px){
+    .left{
+        height: 20vh;
+
+    }
+    .right{
+        justify-content: flex-end !important;
+    }
+    .card{
+        padding: 5px;
+        width: 250px;
+        height: 150px;
+    }
+    .front{
+        top: 100px;
+    }
+    .inputForm p{
+        margin: 0;
+    }
+    
+}
+
+@media only screen and (max-width:376px) {
+    .card{
+        
+        font-size: 12px;
+    }
+    
+    .right {
+        justify-content: flex-start;
+        height: 80vh;
+    }
+
+    .inputForm label,
+    .inputForm p {
+        letter-spacing: normal;
+    }
+}

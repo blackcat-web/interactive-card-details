@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interactive-card-details</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="./assets/icon-complete.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <section class="left">
+            <div class="front card">
+                <div class="logo">
+                    <img src="./assets/card-logo.svg" alt="card logo">
+                </div>
+                <div class="cardDetails">
+                    <p id="cardNum">0000 0000 0000 0000</p>
+                    <p id="cardname">Jane appleseed</p>
+                    <p><span id="dayIncard">00</span> <i>/</i> <span id="monthincard">00</span></p>
+                </div>
+            </div>
+            <div class="back card">
+                <span id="cvvNum">123</span>
+            </div>
+        </section>
+        <section class="right">
+            <div class="inputForm" id="inform">
+                <p><label for="cname">Candidate Name </label>
+                    <input type="text" name="" id="cname" placeholder="e.g. Rakesh Deep">
+                    <span id="errorName" class="errorText"></span>
+                </p>
+
+                <p><label for="cnumber">Card Number</label>
+                    <input type="number" name="" id="cnumber" placeholder="e.g. 1234 3456 6789 0000"
+                        inputmode="numeric" />
+                    <span id="Numerror" class="errorText"></span>
+                </p>
+                <div class="expire-cvv">
+                    <p class="exptext">Exp. date (MM/YY) <br>
+                        <input type="number" name="exday" id="exday" placeholder="MM">
+                        <input type="number" name="exmonth" id="exmonth" placeholder="YY">
+                        <br>
+                        <span id="expDerror" class="errorText"></span>
+                        <span id="expMerror" class="errorText"></span>
+                    </p>
+                    <p class="exDM">CVV <br><input type="number" name="" id="CVV" placeholder="e.g. 123">
+                        <span id="cvvError" class="errorText"></span>
+                    </p>
+                </div>
+                <button type="button" class="btn" onclick="Go()">Confirm</button>
+            </div>
+            <div class="complete-message none" id="thankyoubox">
+                <img src="./assets/icon-complete.svg" alt="complete image">
+                <h2>Thank you!</h2>
+                <p>We've added your card details</p>
+                <button class="btn" onclick="continuekey()">continue</button>
+                <div class="attributes">
+                    challenge by<a href="https://www.frontendmentor.io/home">Frontend Manter</a>
+                    coded by <a href="https://www.github.com/blackcat-web" target="_blank">Rakesh Deep</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+<script src="./assets/script.js"></script>
+
+</html>
