@@ -107,6 +107,7 @@ body {
     padding: 10px;
     width: 450px;
     z-index: 99 !important;
+    background-color: #ffffff;
 }
 
 .inputForm p {
