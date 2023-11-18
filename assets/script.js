@@ -45,7 +45,7 @@ let checker = 0;
         checker++;
         NameError.innerHTML = '';
 
-        if( expday<12 && expday>0 ){
+        if( expday<=12 && expday>0 ){
             dayIncard.innerText = expday;
             expDerror.innerHTML = "";
             checker++;
